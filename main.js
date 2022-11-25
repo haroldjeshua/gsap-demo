@@ -23,3 +23,20 @@ items.forEach((item) => {
     });
   });
 });
+
+// Cards
+const card = document.querySelectorAll(".card");
+
+cards.forEach((card) => {
+  card.addEventListener("click", () => {
+    // Get State
+    const state = Flip.getState(cards);
+
+    // Set active class
+    const isCardActive = card.classList.contains("active");
+    cards.forEach((otherCard, otherIndex) => {
+      otherCard.classList.remove("active");
+      otherCard.classList.remove("is-inactive");
+    });
+  });
+});

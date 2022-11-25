@@ -80,3 +80,23 @@ section {
   box-shadow: 0.5rem 0.5rem 0rem #222;
   gap: 2rem;
 }
+
+.card p {
+  font-size: 0.8rem;
+  display: none;
+}
+
+.card.active p {
+  display: block;
+}
+
+.card.active {
+  grid-column: 1 / span 6;
+  grid-row: 1;
+  order: 0;
+  height: auto;
+}
+
+.card.is-inactive {
+  grid-column: span 2;
+}
