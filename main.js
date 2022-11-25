@@ -17,8 +17,9 @@ items.forEach((item) => {
     const state = Flip.getState(activeNav);
     item.appendChild(activeNav);
     Flip.from(state, {
-      duration: 0.5,
+      duration: 1.25,
       absolute: true,
+      ease: "elastic(1, 0.5)",
     });
   });
 });
